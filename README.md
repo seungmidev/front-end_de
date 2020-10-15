@@ -1,2 +1,27 @@
-# front-end_de
-Front-End Development Environment
+# 프론트엔드 개발환경의 이해와 실습 (webpack, babel, eslint..)
+
+
+## NPM
+### Node.js가 필요한 이유
+1. 최신 스펙으로 개발 가능
+2. 빌드 자동화
+3. 개발 환경 커스터마이징
+
+### Node.js 다운로드
+LTS : node로 서버를 운영할 때
+최신 버전 : 개발 환경을 구축할 때
+
+### package.json
+scripts : 프로젝트를 자동화할 수 있는 셸 스크립트를 입력하는 부분
+scripts > test : 문자열을 echo 명령어 작성 & 에러코드 1번을 반환
+
+### 외부 Package 설치
+1. npm init 명령어를 사용하여 package.json을 기록하고 프로젝트 초기화
+2. CDN 사용 : 외부 라이브러리를 직접 가져오는 방식(서버가 장애가 난다면 어플리케이션이 정상 작동하지 않음)
+3. 코드를 직접 다운로드 : 라이브러리가 업데이트 될 때마다 최신 버전으로 교체해야 함
+4. npm을 사용 : npm install 패키지명
+* package.json 내 유의적 버전 "^16.13.1" 표기
+* 주 버전(Major Version): 기존 버전과 호환되지 않게 변경한 경우 = 16
+* 부 버전(Minor version) : 기존 버전과 호환되면서 기능이 추가된 경우 = 13
+* 수 버전(Patch version) : 기존 버전과 호환되면서 버그를 수정한 경우 = 1
+* ^(캐럿) : ^16.13.1은 16.13.1 ~ 17.0.0 미만 버전까지 포함
